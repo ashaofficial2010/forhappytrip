@@ -4,7 +4,7 @@ const executeQuery = async (query, data) => {
     var db = await mysql.createConnection({
       host: "127.0.0.1",
       port: "3306",
-      database: "nextdb_crud",
+      database: "get_myproperty",
       user: "root",
       password: "",
     });

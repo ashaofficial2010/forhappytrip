@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const SignupPage = async () => {
-  const result = await executeQuery("select * from product", []);
+  const result = await executeQuery("select * from user_register", []);
   return (
     <>
       <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
