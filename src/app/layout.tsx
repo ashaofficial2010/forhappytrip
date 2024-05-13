@@ -3,6 +3,8 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import NextAuthSessionProvider from "./nextauth/NextAuthSessionProvider";
+
 import { Inter } from "next/font/google";
 import "../styles/index.css";
 import "./layout.css";
@@ -25,7 +27,10 @@ export default function RootLayout({
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           <Header />
-          {children}
+          <NextAuthSessionProvider>
+            {children}
+          </NextAuthSessionProvider>
+
           <Footer />
           <ScrollToTop />
         </Providers>

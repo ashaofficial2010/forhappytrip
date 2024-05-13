@@ -33,7 +33,6 @@ const SignupPage = async () => {
                     <h3 className="badge bg-danger">{state?.message}</h3>
                   ) : null}
                 </div>
-
                 <form name="users"
                   method="post"
                   action={formAction}>
@@ -48,6 +47,7 @@ const SignupPage = async () => {
                     <input
                       type="text"
                       name="name"
+                      required
                       placeholder="Enter your full name"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
@@ -63,6 +63,7 @@ const SignupPage = async () => {
                     <input
                       type="email"
                       name="email"
+                      required
                       placeholder="Enter your Email"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
@@ -78,6 +79,7 @@ const SignupPage = async () => {
                     <input
                       type="password"
                       name="password"
+                      required
                       placeholder="Enter your Password"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
