@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import NextAuthSessionProvider from "./nextauth/NextAuthSessionProvider";
 
 import { Inter } from "next/font/google";
-import "../styles/index.css";
+import "@/styles/index.css";
 import "./layout.css";
 
 const inter = Inter({ subsets: ["latin"] });

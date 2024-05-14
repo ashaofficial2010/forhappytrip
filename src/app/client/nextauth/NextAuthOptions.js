@@ -27,11 +27,7 @@ export const authOptions = {
         const user = await executeQuery(query, []);
         if (Object.keys(user).length > 0) {
             console.log("success");
-            return {
-                Id: 1,
-                email: email,
-                user: "Dr. Vipin Classes",
-            }
+            return { user }
         } else {
             console.log("errrr")
             return null;
