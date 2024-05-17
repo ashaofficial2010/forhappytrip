@@ -1,8 +1,7 @@
 "use client";
-
-import NavArea from './NavArea'
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+import { baselightTheme } from "@/utils/theme/DefaultColors";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 
 export default function RootLayout({
   children,
@@ -10,16 +9,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
-        <NavArea />
-        {children}
+    <html lang="en">
+      <body>
+        <ThemeProvider theme={baselightTheme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
